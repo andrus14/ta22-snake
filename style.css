@@ -27,3 +27,16 @@ body {
 .food {
     background-color: red;    
 }
+
+.hidden {
+    display: none;
+}
+
+#game-over {
+    position: absolute;
+    background: white;
+    font-size: 2rem;
+    padding: 0.4rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
