@@ -6,26 +6,42 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.score-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#score, #high-score {
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+
 #game-board {
     border-collapse: collapse;
+    font-size: 12px;
 }
 
 #game-board td {
     border: gray solid 1px;
-    width: 8px;
-    height: 8px;
+    padding: 0px;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    line-height: 0;
 }
 
 .snake {
-    background-color: blueviolet;    
+    font-size: 11px;
 }
 
-.food {
-    background-color: red;    
+.snake-head {
+    font-size: 12px;
 }
 
 .hidden {

@@ -22,12 +22,21 @@ class GameBoard {
                 cellTd.setAttribute('id', id);
                 
                 if ( snakeCoordinates.includes(id) ) {
-                    cellTd.classList.add('snake');
+
+                    if ( id == snakeCoordinates[0] ) {
+                        cellTd.innerText = '😈';
+                        cellTd.classList.add('snake-head');
+                    } else {
+                        cellTd.innerText = '🟣';
+                        cellTd.classList.add('snake');
+                    }
+                    
                 }
                 
                 const foodCoordinates = food.y + '-' + food.x;
                 if ( id == foodCoordinates ) {
-                    cellTd.classList.add('food');
+                    cellTd.innerText = food.getEmoji();
+                    // cellTd.classList.add('food');
                 }
                 
                 rowTr.append(cellTd);
